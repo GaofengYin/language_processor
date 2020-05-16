@@ -26,7 +26,11 @@ objetos		:    objeto objetos
 			a "comma" no fim de cada chave é para dizer que as chaves podem aparecer 
 			com virgula ou sem no fim e para evitar escrever tudo outra vez sem virgula
 			optei por criar um não terminal que pode ser ',' ou nada.*/
-objeto		: 	  KIND comma
+objeto		: 	  normal
+			|	  array
+		;
+
+normal 		: 	  KIND comma
 			|	  ETAG comma
 			|	  ID comma
 			|	  NAME comma
@@ -44,9 +48,8 @@ objeto		: 	  KIND comma
 			|	  ADD_GUEST comma
 			|	  CODE comma
 			|	  TYPE comma
-			|	  KEY
-			|	  RESERVED
-			|	  array
+			|	  KEY comma
+			|	  RESERVED comma
 		;
 
 array		:	  '"' OBJECT '"' ':' '{' objetos '}' comma
