@@ -6,8 +6,9 @@
 	int yyerror(char*);
 	extern int yylineno;
 %}
-
+	//ponto da partida
 %start program
+	//tokens para identificar terminais 
 %token KIND ETAG ID SUMMARY NAME BACKGROUNDCOLOR TYPE EMAIL LOCATION KEY 
 %token TIMEZONE TIME HIDDEN RESERVED OBJECT LINK DATE CREATEDON URL ADD_GUEST CODE
 
@@ -22,14 +23,14 @@ objetos		:    objeto objetos
 			|
 		;
 			/*objecto são as chaves e o respectivo valor associado. 
-			podem ser arrays em que desdobrei para melhor hieraquizar a informação
-			a "comma" no fim de cada chave é para dizer que as chaves podem aparecer 
-			com virgula ou sem no fim e para evitar escrever tudo outra vez sem virgula
-			optei por criar um não terminal que pode ser ',' ou nada.*/
+			podem ser arrays ou normais em que desdobrei para melhor hieraquizar a informação.
+			*/
 objeto		: 	  normal
 			|	  array
 		;
-
+			/*a "comma" no fim de cada chave é para dizer que as chaves podem aparecer 
+			com virgula ou sem e para evitar escrever tudo outra vez sem virgula então
+			optei por criar um não terminal que pode ser ',' ou nada. */
 normal 		: 	  KIND comma
 			|	  ETAG comma
 			|	  ID comma
@@ -51,7 +52,7 @@ normal 		: 	  KIND comma
 			|	  KEY comma
 			|	  RESERVED comma
 		;
-
+			/*o array podem ter varios valores dentro ou array multidimensional */
 array		:	  '"' OBJECT '"' ':' '{' objetos '}' comma
 			|	  '"' OBJECT '"' ':' '[' objetos ']' comma
 			|	  '"' OBJECT '"' ':' '[' program ']' comma
