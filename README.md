@@ -1,1 +1,3 @@
-trabalho_pl_1
+Trabalho pratico 1 PL 
+
+proceesar um ficheiro json.
