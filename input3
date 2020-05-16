@@ -1,0 +1,97 @@
+{
+  "kind": "calendar#event",
+  "etag": w/"sadsad221321sda",
+  "id": 0,
+  "Link": https://www.wook.pt/,
+  "time": 10:53:30,
+  "summary": trabalho de PL,
+  "location": Macedo de Cavaleiro,
+  "creator": {
+    "id": 23,
+    "email": processamento@hotmail.com,
+  },
+  "organizer": {
+    "id": 07,
+    "email": amazon@google.com,
+  },
+  "start": {
+    "date": 1996-08-18,
+    "createdon": 2003-01-01 14:34:55,
+    "timeZone": Portugal/lisbon
+  },
+  "end": {
+    "date": 2010-09-13,
+    "createdon": 1990-06-18 14:14:14,
+    "timeZone": Spain/madrid
+  },
+  "allowedConferenceSolutionTypes": [
+    hangoutsMeet
+  ],
+  "originalStartTime": {
+    "date": 1992-11-12,
+    "createdon": 2005-03-07 04:00:00,
+    "timeZone": China/wuhan
+  },
+  "attendees": [
+    {
+      "id": 23,
+      "email": elon@tesla.com,
+      "additionalGuests": 9
+    }
+  ],
+  "extendedProperties": {
+    "private": {
+      (key): addOn
+    },
+    "shared": {
+      (key): hangoutsMeet
+    }
+  },
+  "Link": https://virtual.ipb.pt/portal,
+  "conferenceData": {
+    "createRequest": {
+      "id": 17,
+      "conferenceSolutionKey": {
+        "type": thisIsString
+      },
+      "status": {
+        "code": xdD23da
+      }
+    },
+    "entryPoints": [
+      {
+        "url": www.google.com
+      }
+    ],
+    "conferenceSolution": {
+      "key": {
+        "type": crypto
+      },
+      "name": hollow,
+      "url": https://www.coinbase.com/dashboard
+    },
+    "id": 14,
+    "gadget": {
+    "name": Exam,
+    "preferences": {
+      (key): eventNamedHangout
+    }
+  },
+  "reminders": {
+    "overrides": [
+      {
+        "time": 13:15:45
+      }
+    ]
+  },
+  "source": {
+    "url": https://apps.ipb.pt/sumarios/
+  },
+  "attachments": [
+    {
+      "url": https://apps2.ipb.pt/online/ui/#/login,
+      "name": IPB
+    }
+  ]
+}
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "calendar#calendarListEntry",
+  "etag": w/"sadsad221321sda",
+  "id": 05,
+  "summary": this is a string,
+  "location": Braganca,
+  "timeZone": Portugal/Lisbon,
+  "backgroundColor": #ff5733,
+  "hidden": true,
+  "defaultReminders": [
+    {
+      "date": 1996-07-13,
+      "createdon": 1996-07-13 23:30:45
+    }
+  ],
+  "notificationSettings": {
+    "notifications": [
+      {
+        "url": https:regexr.com/,
+        "id": 15,
+        "code": dsada23213
+      }
+    ]
+  },
+  "hidden": true,
+  "conferenceProperties": {
+    "allowedConferenceSolutionTypes": [
+      eventNamedHangout
+    ]
+  }
+}

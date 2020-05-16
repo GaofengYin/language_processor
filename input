@@ -1,0 +1,15 @@
+{
+  "kind": "calendar#calendar",
+  "etag": w/"sadsad221321sda",
+  "id": 01,
+  "backgroundColor": #ff5733,
+  "summary": piece of shit,
+  "email": gustavo_gus@hotmail.com,
+  "location": Lisbon,
+  "timeZone": lisbon,
+  "conferenceProperties": {
+    "allowedConferenceSolutionTypes": [
+      hangoutsMeet
+    ]
+  }
+}
