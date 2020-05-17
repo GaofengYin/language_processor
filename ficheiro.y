@@ -62,7 +62,7 @@ key 		: 	  KIND
 			|	  KEY
 			|	  RESERVED
 		;
-
+			// é uma virgula ou não é nada
 comma 		: ','
 			|
 		;
