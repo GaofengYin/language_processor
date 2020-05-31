@@ -1280,8 +1280,128 @@ yyreduce:
   YY_REDUCE_PRINT (yyn);
   switch (yyn)
     {
-      
-#line 1285 "y.tab.c" /* yacc.c:1646  */
+        case 12:
+#line 48 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1287 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 13:
+#line 49 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1293 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 14:
+#line 50 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1299 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 15:
+#line 51 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1305 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 16:
+#line 52 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1311 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 17:
+#line 53 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1317 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 18:
+#line 54 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1323 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 19:
+#line 55 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1329 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 20:
+#line 56 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1335 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 21:
+#line 57 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1341 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 22:
+#line 58 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1347 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 23:
+#line 59 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1353 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 24:
+#line 60 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1359 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 25:
+#line 61 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1365 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 26:
+#line 62 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1371 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 27:
+#line 63 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1377 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 28:
+#line 64 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1383 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 29:
+#line 65 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1389 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 30:
+#line 66 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1395 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 31:
+#line 67 "ficheiro.y" /* yacc.c:1646  */
+    {printf("%s \n", (yyvsp[0].valores) );}
+#line 1401 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+
+#line 1405 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires

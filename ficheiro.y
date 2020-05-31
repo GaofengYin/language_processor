@@ -24,7 +24,7 @@ datas			:    data datas
 		;
 
 			/*os dados podem ser key , array , object ou array_object comforme o dado processado*/
-data			:    key comma
+data			:    key comma 
 		|   		 array comma
 		|   		 object comma
 		|   		 array_object comma
@@ -45,26 +45,26 @@ object 			:    '"' OBJECT '"' ':' '{' datas '}'
 			/*a "comma" no fim de cada chave é para dizer que as chaves podem aparecer 
 			com virgula ou sem e para evitar escrever tudo outra vez sem virgula então
 			optei por criar um não terminal que pode ser ',' ou nada. */
-key 			:    KIND
-		|    		 ETAG
-		|   		 ID
-		|   		 NAME
-		|   		 SUMMARY
-		|    		 BACKGROUNDCOLOR
-		|    		 EMAIL
-		|    		 LOCATION
-		|   		 TIMEZONE
-		|   		 HIDDEN
-		|   		 DATE
-		|    		 CREATEDON
-		|    		 URL
-		|    		 LINK	
-		|   		 TIME
-		|   		 ADD_GUEST
-		|   	 	 CODE
-		|    		 TYPE
-		|   		 KEY
-		|   		 RESERVED
+key 			:    KIND 				{printf("%s \n", $1 );}
+		|    		 ETAG 				{printf("%s \n", $1 );}
+		|   		 ID   				{printf("%s \n", $1 );}
+		|   		 NAME				{printf("%s \n", $1 );}
+		|   		 SUMMARY			{printf("%s \n", $1 );}
+		|    		 BACKGROUNDCOLOR	{printf("%s \n", $1 );}
+		|    		 EMAIL				{printf("%s \n", $1 );}
+		|    		 LOCATION			{printf("%s \n", $1 );}
+		|   		 TIMEZONE			{printf("%s \n", $1 );}
+		|   		 HIDDEN				{printf("%s \n", $1 );}
+		|   		 DATE				{printf("%s \n", $1 );}
+		|    		 CREATEDON			{printf("%s \n", $1 );}
+		|    		 URL				{printf("%s \n", $1 );}
+		|    		 LINK				{printf("%s \n", $1 );}
+		|   		 TIME 				{printf("%s \n", $1 );}
+		|   		 ADD_GUEST			{printf("%s \n", $1 );}
+		|   	 	 CODE				{printf("%s \n", $1 );}
+		|    		 TYPE				{printf("%s \n", $1 );}
+		|   		 KEY 				{printf("%s \n", $1 );}
+		|   		 RESERVED			{printf("%s \n", $1 );}
 		;
 			// é uma virgula ou não é nada
 comma 			:    ','
