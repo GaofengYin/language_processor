@@ -1514,14 +1514,14 @@ yyreturn:
 /*o yyerror para identificar a linha onde ocorreu o erro caso haja alguma */
 int yyerror(char *msg){
 	fprintf(stderr, "ERRO(%d):%s\n",yylineno, msg);
-	variavel = 1;
+	//variavel = 1;
 	return 0;
 }
 /*caso esteja tudo bem é executado o comando de printf dentro do if*/
 int main(){
 	yyparse();
-	if(variavel != 1){
-	printf("Processado com sucesso!\n");
-	}
+	/*if(variavel != 1){
+	//printf("Processado com sucesso!\n");
+	}*/
 	return 0;
 }
