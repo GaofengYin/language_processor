@@ -20,51 +20,51 @@ program		:    '{' datas '}'
 		;
 			/*recursiva a direita.Existe pelo menos 1 ou mais objetos.*/
 datas		:    data datas
-			|
+		|    data
 		;
 			/*os dados podem ser key , array , object ou array_object comforme o dado processado*/
-data		: 	  key comma
-			|	  array comma
-			|	  object comma
-			|	  array_object comma
+data		:    key comma
+		|    array comma
+		|    object comma
+		|    array_object comma
 		;
 			/*o array podem ter varios valores dentro ou array multidimensional */
-array		:	  '"' OBJECT '"' ':' '[' datas ']'
+array		:    '"' OBJECT '"' ':' '[' datas ']'
 		;
 			/*dentro de array pode ter objetos */
-array_object:	  '"' OBJECT '"' ':' '[' program ']'	
+array_object	:    '"' OBJECT '"' ':' '[' program ']'	
 		;
 			/*um objeto*/
-object 		:	  '"' OBJECT '"' ':' '{' datas '}'
+object 		:    '"' OBJECT '"' ':' '{' datas '}'
 		;	
 
 			/*a "comma" no fim de cada chave é para dizer que as chaves podem aparecer 
 			com virgula ou sem e para evitar escrever tudo outra vez sem virgula então
 			optei por criar um não terminal que pode ser ',' ou nada. */
-key 		: 	  KIND
-			|	  ETAG
-			|	  ID
-			|	  NAME
-			|	  SUMMARY
-			|	  BACKGROUNDCOLOR
-			|	  EMAIL
-			|	  LOCATION
-			|	  TIMEZONE
-			|	  HIDDEN
-			|	  DATE
-			|	  CREATEDON
-			|     URL
-			|	  LINK	
-			|	  TIME
-			|	  ADD_GUEST
-			|	  CODE
-			|	  TYPE
-			|	  KEY
-			|	  RESERVED
+key 		:     KIND
+		|     ETAG
+		|     ID
+		|     NAME
+		|     SUMMARY
+		|     BACKGROUNDCOLOR
+		|     EMAIL
+		|     LOCATION
+		|     TIMEZONE
+		|     HIDDEN
+		|     DATE
+		|     CREATEDON
+		|     URL
+		|     LINK	
+		|     TIME
+		|     ADD_GUEST
+		|     CODE
+		|     TYPE
+		|     KEY
+		|     RESERVED
 		;
 			// é uma virgula ou não é nada
-comma 		: ','
-			|
+comma 		:     ','
+		|
 		;
 
 		

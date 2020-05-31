@@ -525,11 +525,11 @@ static const yytype_int8 yypact[] =
      means the default is an error.  */
 static const yytype_uint8 yydefact[] =
 {
-       0,     4,     0,    12,    13,    14,    16,    15,    17,    29,
+       0,     0,     0,    12,    13,    14,    16,    15,    17,    29,
       18,    19,    30,    20,    26,    21,    31,    25,    22,    23,
       24,    27,    28,     0,     0,     4,    33,    33,    33,    33,
        1,     0,     2,     3,    32,     6,     8,     7,     5,     0,
-       0,     4,     4,     0,     0,     0,    11,    10,     9
+       0,     0,     0,     0,     0,     0,    11,    10,     9
 };
 
   /* YYPGOTO[NTERM-NUM].  */
@@ -592,7 +592,7 @@ static const yytype_uint8 yyr1[] =
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
 static const yytype_uint8 yyr2[] =
 {
-       0,     2,     3,     2,     0,     2,     2,     2,     2,     7,
+       0,     2,     3,     2,     1,     2,     2,     2,     2,     7,
        7,     7,     1,     1,     1,     1,     1,     1,     1,     1,
        1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
        1,     1,     1,     0
