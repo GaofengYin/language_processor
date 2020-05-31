@@ -33,49 +33,93 @@ kind [a-zA-Z]+"#"[a-zA-Z]+
 %%
 					// chave : valor da chave
 
-"\"kind\": "\"{kind}\" 						{return KIND;}
+"\"kind\": "\"{kind}\" 						{	strcpy(yylval.valores, yytext);
+												return KIND;
+											}
 
-"\"etag\": "{etag}							{return	ETAG;}
+"\"etag\": "{etag}							{	strcpy(yylval.valores, yytext);
+												return	ETAG;
+											}
 
-"\"id\": "{integer}							{return ID;}
+"\"id\": "{integer}							{	strcpy(yylval.valores, yytext);
+												return ID;
+											}
 
-"\"name\": "{string}						{return NAME;}
+"\"name\": "{string}						{	strcpy(yylval.valores, yytext);	
+												return NAME;
+											}
 
-"\"summary\": "{string}						{return SUMMARY;}
+"\"summary\": "{string}						{	strcpy(yylval.valores, yytext);
+												return SUMMARY;
+											}
 
-"\"backgroundColor\": "{hex_color}			{return BACKGROUNDCOLOR;}
+"\"backgroundColor\": "{hex_color}			{	strcpy(yylval.valores, yytext);
+												return BACKGROUNDCOLOR;
+											}
 
-"\"email\": "{email}						{return EMAIL;}
+"\"email\": "{email}						{	strcpy(yylval.valores, yytext);	
+												return EMAIL;
+											}
 
-"\"location\": "{string}					{return LOCATION;}
+"\"location\": "{string}					{	strcpy(yylval.valores, yytext);	
+												return LOCATION;
+											}
 
-"\"timeZone\": "{string}					{return TIMEZONE;}
+"\"timeZone\": "{string}					{	strcpy(yylval.valores, yytext);	
+												return TIMEZONE;
+											}
 
-"\"hidden\": "{boolean}						{return HIDDEN;}
+"\"hidden\": "{boolean}						{	strcpy(yylval.valores, yytext);
+												return HIDDEN;
+											}
 
-"\"date\": "{date}							{return DATE;}
+"\"date\": "{date}							{	strcpy(yylval.valores, yytext);
+												return DATE;
+											}
 
-"\"createdon\": "{datetime}					{return CREATEDON;}
+"\"createdon\": "{datetime}					{	strcpy(yylval.valores, yytext);
+												return CREATEDON;
+											}
 
-"\"url\": "{url}							{return URL;}
+"\"url\": "{url}							{	strcpy(yylval.valores, yytext);
+												return URL;
+											}
 
-"\"Link\": "{url}							{return LINK;}
+"\"Link\": "{url}							{	strcpy(yylval.valores, yytext);
+												return LINK;
+											}
 
-"\"time\": "{time}							{return	TIME;}
+"\"time\": "{time}							{	strcpy(yylval.valores, yytext);	
+												return	TIME;
+											}
 
-"\"additionalGuests\": "{integer}			{return ADD_GUEST;}
+"\"additionalGuests\": "{integer}			{	strcpy(yylval.valores, yytext);
+												return ADD_GUEST;
+											}
 
-"\"code\": "{string}						{return CODE;}
+"\"code\": "{string}						{	strcpy(yylval.valores, yytext);
+												return CODE;
+											}
 
-"(key): "{palavras_reservadas}				{return KEY;}
+"(key): "{palavras_reservadas}				{	strcpy(yylval.valores, yytext);
+												return KEY;
+											}
 
-"\"type\": "{string}						{return TYPE;}
+"\"type\": "{string}						{	strcpy(yylval.valores, yytext);
+												return TYPE;
+											}
 
-{palavras_reservadas}						{return RESERVED;}
+{palavras_reservadas}						{	strcpy(yylval.valores, yytext);
+												return RESERVED;
+											}
 
-[a-zA-Z]+									{return OBJECT;}
+[a-zA-Z]+									{	strcpy(yylval.valores, yytext);
+												return OBJECT;
+											}
 
-[,{}:\[\]"]									{return (yytext[0]);}
+[,{}:\[\]"]									{	strcpy(yylval.valores, yytext);
+												return (yytext[0]);
+											}
 
 [ \t\n]										;
 

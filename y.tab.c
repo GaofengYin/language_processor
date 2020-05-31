@@ -153,7 +153,16 @@ extern int yydebug;
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef int YYSTYPE;
+
+union YYSTYPE
+{
+#line 9 "ficheiro.y" /* yacc.c:355  */
+char valores[100];
+
+#line 163 "y.tab.c" /* yacc.c:355  */
+};
+
+typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif
@@ -167,7 +176,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 171 "y.tab.c" /* yacc.c:358  */
+#line 180 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -466,10 +475,10 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    19,    19,    22,    23,    26,    27,    28,    29,    32,
-      35,    38,    44,    45,    46,    47,    48,    49,    50,    51,
-      52,    53,    54,    55,    56,    57,    58,    59,    60,    61,
-      62,    63,    66,    67
+       0,    18,    18,    22,    23,    27,    28,    29,    30,    34,
+      38,    42,    48,    49,    50,    51,    52,    53,    54,    55,
+      56,    57,    58,    59,    60,    61,    62,    63,    64,    65,
+      66,    67,    70,    71
 };
 #endif
 
@@ -1272,7 +1281,7 @@ yyreduce:
   switch (yyn)
     {
       
-#line 1276 "y.tab.c" /* yacc.c:1646  */
+#line 1285 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1500,7 +1509,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 71 "ficheiro.y" /* yacc.c:1906  */
+#line 75 "ficheiro.y" /* yacc.c:1906  */
 
 /*o yyerror para identificar a linha onde ocorreu o erro caso haja alguma */
 int yyerror(char *msg){
