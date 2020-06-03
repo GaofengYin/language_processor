@@ -1053,153 +1053,231 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 37 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return KIND;
 											}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 41 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);
+#line 45 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return	ETAG;
 											}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 45 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);
+#line 53 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<6; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return ID;
 											}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 49 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);	
+#line 61 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);	
 												return NAME;
 											}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 53 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);
+#line 69 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;		
+												for(i=0; i<11; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return SUMMARY;
 											}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 57 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);
+#line 77 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<19; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return BACKGROUNDCOLOR;
 											}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 61 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);	
+#line 85 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<9; i++){aux++;}
+												strcpy(yylval.valores, aux);	
 												return EMAIL;
 											}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 65 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);	
+#line 93 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<12; i++){aux++;}
+												strcpy(yylval.valores, aux);	
 												return LOCATION;
 											}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 69 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);	
+#line 101 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<12; i++){aux++;}
+												strcpy(yylval.valores, aux);	
 												return TIMEZONE;
 											}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 73 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);
+#line 109 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<10; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return HIDDEN;
 											}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 77 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);
+#line 117 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return DATE;
 											}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 81 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);
+#line 125 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<13; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return CREATEDON;
 											}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 85 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);
+#line 133 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<7; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return URL;
 											}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 89 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);
+#line 141 "ficheiro.l"
+{	
+												char *aux = yytext;	
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return LINK;
 											}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 93 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);	
+#line 149 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);	
 												return	TIME;
 											}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 97 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);
+#line 157 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<20; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return ADD_GUEST;
 											}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 101 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);
+#line 165 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return CODE;
 											}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 105 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);
+#line 173 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<7; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return KEY;
 											}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 109 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);
+#line 181 "ficheiro.l"
+{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return TYPE;
 											}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 113 "ficheiro.l"
-{	strcpy(yylval.valores, yytext);
+#line 189 "ficheiro.l"
+{	
+												char *aux = yytext;
+												strcpy(yylval.valores, yytext);
 												return RESERVED;
 											}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 117 "ficheiro.l"
+#line 195 "ficheiro.l"
 {	strcpy(yylval.valores, yytext);
 												return OBJECT;
 											}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 121 "ficheiro.l"
+#line 199 "ficheiro.l"
 {	strcpy(yylval.valores, yytext);
 												return (yytext[0]);
 											}
@@ -1207,20 +1285,20 @@ YY_RULE_SETUP
 case 23:
 /* rule 23 can match eol */
 YY_RULE_SETUP
-#line 125 "ficheiro.l"
+#line 203 "ficheiro.l"
 ;
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 127 "ficheiro.l"
+#line 205 "ficheiro.l"
 {printf("Token invalido\n");}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 129 "ficheiro.l"
+#line 207 "ficheiro.l"
 ECHO;
 	YY_BREAK
-#line 1224 "lex.yy.c"
+#line 1302 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2235,5 +2313,5 @@ void yyfree (void * ptr )
 			free( (char *) ptr );	/* see yyrealloc() for (char *) cast */
 }
 
-#line 129 "ficheiro.l"
+#line 207 "ficheiro.l"
 

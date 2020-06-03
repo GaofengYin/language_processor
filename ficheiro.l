@@ -33,83 +33,161 @@ kind [a-zA-Z]+"#"[a-zA-Z]+
 %%
 					// chave : valor da chave
 
-"\"kind\": "\"{kind}\" 						{	strcpy(yylval.valores, yytext);
+"\"kind\": "\"{kind}\" 						{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return KIND;
 											}
 
-"\"etag\": "{etag}							{	strcpy(yylval.valores, yytext);
+"\"etag\": "{etag}							{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return	ETAG;
 											}
 
-"\"id\": "{integer}							{	strcpy(yylval.valores, yytext);
+"\"id\": "{integer}							{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<6; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return ID;
 											}
 
-"\"name\": "{string}						{	strcpy(yylval.valores, yytext);	
+"\"name\": "{string}						{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);	
 												return NAME;
 											}
 
-"\"summary\": "{string}						{	strcpy(yylval.valores, yytext);
+"\"summary\": "{string}						{	
+												char *aux = yytext;
+												int i;		
+												for(i=0; i<11; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return SUMMARY;
 											}
 
-"\"backgroundColor\": "{hex_color}			{	strcpy(yylval.valores, yytext);
+"\"backgroundColor\": "{hex_color}			{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<19; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return BACKGROUNDCOLOR;
 											}
 
-"\"email\": "{email}						{	strcpy(yylval.valores, yytext);	
+"\"email\": "{email}						{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<9; i++){aux++;}
+												strcpy(yylval.valores, aux);	
 												return EMAIL;
 											}
 
-"\"location\": "{string}					{	strcpy(yylval.valores, yytext);	
+"\"location\": "{string}					{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<12; i++){aux++;}
+												strcpy(yylval.valores, aux);	
 												return LOCATION;
 											}
 
-"\"timeZone\": "{string}					{	strcpy(yylval.valores, yytext);	
+"\"timeZone\": "{string}					{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<12; i++){aux++;}
+												strcpy(yylval.valores, aux);	
 												return TIMEZONE;
 											}
 
-"\"hidden\": "{boolean}						{	strcpy(yylval.valores, yytext);
+"\"hidden\": "{boolean}						{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<10; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return HIDDEN;
 											}
 
-"\"date\": "{date}							{	strcpy(yylval.valores, yytext);
+"\"date\": "{date}							{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return DATE;
 											}
 
-"\"createdon\": "{datetime}					{	strcpy(yylval.valores, yytext);
+"\"createdon\": "{datetime}					{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<13; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return CREATEDON;
 											}
 
-"\"url\": "{url}							{	strcpy(yylval.valores, yytext);
+"\"url\": "{url}							{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<7; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return URL;
 											}
 
-"\"Link\": "{url}							{	strcpy(yylval.valores, yytext);
+"\"Link\": "{url}							{	
+												char *aux = yytext;	
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return LINK;
 											}
 
-"\"time\": "{time}							{	strcpy(yylval.valores, yytext);	
+"\"time\": "{time}							{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);	
 												return	TIME;
 											}
 
-"\"additionalGuests\": "{integer}			{	strcpy(yylval.valores, yytext);
+"\"additionalGuests\": "{integer}			{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<20; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return ADD_GUEST;
 											}
 
-"\"code\": "{string}						{	strcpy(yylval.valores, yytext);
+"\"code\": "{string}						{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return CODE;
 											}
 
-"(key): "{palavras_reservadas}				{	strcpy(yylval.valores, yytext);
+"(key): "{palavras_reservadas}				{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<7; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return KEY;
 											}
 
-"\"type\": "{string}						{	strcpy(yylval.valores, yytext);
+"\"type\": "{string}						{	
+												char *aux = yytext;
+												int i;
+												for(i=0; i<8; i++){aux++;}
+												strcpy(yylval.valores, aux);
 												return TYPE;
 											}
 
-{palavras_reservadas}						{	strcpy(yylval.valores, yytext);
+{palavras_reservadas}						{	
+												char *aux = yytext;
+												strcpy(yylval.valores, yytext);
 												return RESERVED;
 											}
 
