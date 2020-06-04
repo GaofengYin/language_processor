@@ -1,6 +1,7 @@
 
 %{
 	#include <stdio.h>
+	#include "html.c"
 	int variavel = 0;
 	int yylex();
 	int yyerror(char*);
@@ -52,14 +53,14 @@ key 			:    KIND 				{printf("<tr>\n<th>Key</th>\n<th>value</th>\n</tr>\n");
 		|   		 NAME				{printf("<tr>\n<th>NAME</th>\n<th>%s</th> \n", $1 );}
 		|   		 SUMMARY			{printf("<tr>\n<th>SUMMARY</th>\n<th>%s</th> \n", $1 );}
 		|    		 BACKGROUNDCOLOR	{printf("<tr>\n<th>BACKGROUNDCOLOR</th>\n<th>%s</th> \n", $1 );}
-		|    		 EMAIL				{printf("<tr>\n<th>EMAIL</th>\n<th>%s</th> \n", $1 );}
+		|    		 EMAIL				{printf("<tr>\n<th>EMAIL</th>\n<th><a href=\"mailto:%s\">%s</a></th> \n", $1,$1 );}
 		|    		 LOCATION			{printf("<tr>\n<th>LOCATION</th>\n<th>%s</th> \n", $1 );}
 		|   		 TIMEZONE			{printf("<tr>\n<th>TIMEZONE</th>\n<th>%s</th> \n", $1 );}
 		|   		 HIDDEN				{printf("<tr>\n<th>HIDDEN</th>\n<th>%s</th> \n", $1 );}
 		|   		 DATE				{printf("<tr>\n<th>DATE</th>\n<th>%s</th> \n", $1 );}
 		|    		 CREATEDON			{printf("<tr>\n<th>CREATEDON</th>\n<th>%s</th> \n", $1 );}
-		|    		 URL				{printf("<tr>\n<th>URL</th>\n<th>%s</th> \n", $1 );}
-		|    		 LINK				{printf("<tr>\n<th>LINK</th>\n<th>%s</th> \n", $1 );}
+		|    		 URL				{printf("<tr>\n<th>URL</th>\n<th><a href=\"%s\">%s</a></th> \n", $1,$1 );}
+		|    		 LINK				{printf("<tr>\n<th>LINK</th>\n<th><a href=\"%s\">%s</a></th> \n", $1,$1 );}
 		|   		 TIME 				{printf("<tr>\n<th>TIME</th>\n<th>%s</th> \n", $1 );}
 		|   		 ADD_GUEST			{printf("<tr>\n<th>ADD_GUEST</th>\n<th>%s</th> \n", $1 );}
 		|   	 	 CODE				{printf("<tr>\n<th>CODE</th>\n<th>%s</th> \n", $1 );}
@@ -80,16 +81,6 @@ int yyerror(char *msg){
 	//variavel = 1;
 	return 0;
 }
-void htmlBegin(){
-	printf("<!DOCTYPE html>\n<html>\n<head>\n");
-	printf("<title>Google calendar info</title>\n");
-	printf("</head>\n<body>\n");
-	printf("<h2>HTML Table</h2>\n");
-	printf("<table>\n");
-}
-void htmlEnd(){
-	printf("</table>\n</body>\n</html>\n");
-}
 /*caso esteja tudo bem é executado o comando de printf dentro do if*/
 int main(){
 	htmlBegin();
@@ -100,3 +91,5 @@ int main(){
 	htmlEnd();
 	return 0;
 }
+//consultar isto 
+//https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro
