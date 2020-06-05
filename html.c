@@ -1,6 +1,8 @@
 void htmlBegin();
 void htmlEnd();
 void style();
+void beginTable();
+void endTable();
 
 void htmlBegin(){
 	printf("<!DOCTYPE html>\n<html>\n<head>\n");
@@ -8,10 +10,14 @@ void htmlBegin(){
 	printf("</head>\n");
 	printf("<body>\n\n");
 	printf("<h1>Google calendar info</h1>\n\n");
+}
+void beginTable(){
 	printf("<table>\n");
 }
+void endTable(){
+printf("</table>\n\n");
+}
 void htmlEnd(){
-	printf("</table>\n\n");
 	printf("</body>\n");
 	printf("</html>\n");
 }
