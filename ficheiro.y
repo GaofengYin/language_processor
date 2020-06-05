@@ -54,12 +54,12 @@ key 			:    KIND 				{printf("  <tr>\n    <th>Identificador</th>\n    <th>Valor<
 		|   		 ID   				{printf("  <tr>\n    <td>ID</td>\n    <td>%s</td> \n", $1 ); contador++;}
 		|   		 NAME				{printf("  <tr>\n    <td>Name</td>\n    <td>%s</td> \n", $1 ); contador++;}
 		|   		 SUMMARY			{printf("  <tr>\n    <td>Summary</td>\n    <td>%s</td> \n", $1 );contador++;}
-		|    		 BACKGROUNDCOLOR	{printf("  <tr>\n    <td>Background color</td>\n    <td>%s</td> \n", $1 );contador++;}
+		|    		 BACKGROUNDCOLOR	{printf("  <tr>\n    <td>Background color</td>\n    <td>%s</td> \n", $1 );  strcpy(chave, $1); contador++;}
 		|    		 EMAIL				{printf("  <tr>\n    <td>Email</td>\n    <td><a href=\"mailto:%s\">%s</a></td> \n", $1,$1 );contador++;}
 		|    		 LOCATION			{printf("  <tr>\n    <td>Location</td>\n    <td>%s</td> \n", $1 ); contador++;}
 		|   		 TIMEZONE			{printf("  <tr>\n    <td>Timezone</td>\n    <td>%s</td> \n", $1 ); contador++;}
 		|   		 HIDDEN				{printf("  <tr>\n    <td>Hidden</td>\n    <td>%s</td> \n", $1 ); contador++;}
-		|   		 DATE				{printf("  <tr>\n    <td>Date</td>\n    <td>%s</td> \n", $1 ); strcpy(chave, $1);  contador++;}
+		|   		 DATE				{printf("  <tr>\n    <td>Date</td>\n    <td>%s</td> \n", $1 ); contador++;}
 		|    		 CREATEDON			{printf("  <tr>\n    <td>Created on</td>\n    <td>%s</td> \n", $1 );contador++;}
 		|    		 URL				{printf("  <tr>\n    <td>URL</td>\n    <td><a href=\"%s\">%s</a></td> \n", $1,$1 ); contador++;}
 		|    		 LINK				{printf("  <tr>\n    <td>Link</td>\n    <td><a href=\"%s\">%s</a></td> \n", $1,$1 );contador++;}
@@ -87,7 +87,7 @@ int main(){
 	yyparse();
 	endTable();
 	printf("<h1>Numero de chaves %d</h1>\n",contador);
-	printf("<h4>Tem uma reunião no dia %s</h4>\n",chave );
+	printf("<p style=\"color:%s;\">O valor em hexadecimal para colorir este paragrafo foi retirado da tabela acima</p>\n",chave );
 	htmlEnd();
 	return 0;
 }

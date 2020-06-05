@@ -8,7 +8,7 @@ void htmlBegin(){
 	printf("<!DOCTYPE html>\n<html>\n<head>\n");
 	style();
 	printf("</head>\n");
-	printf("<body>\n\n");
+	printf("<body style=\"background-color:rgb(192, 192, 192)\">\n\n");
 	printf("<h1>Google calendar info</h1>\n\n");
 }
 void beginTable(){
@@ -23,7 +23,7 @@ void htmlEnd(){
 }
 void style(){
 	printf("<style>\n");
-	printf("h1 {text-align: center;}\n");
+	printf("h1, p {text-align: center;}\n");
 	printf("table {\n");
 	printf("   font-family: arial, sans-serif;\n");
 	printf("   border-collapse: collapse;\n");

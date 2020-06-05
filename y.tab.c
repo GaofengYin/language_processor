@@ -1322,7 +1322,7 @@ yyreduce:
 
   case 17:
 #line 57 "ficheiro.y" /* yacc.c:1646  */
-    {printf("  <tr>\n    <td>Background color</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );contador++;}
+    {printf("  <tr>\n    <td>Background color</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );  strcpy(chave, (yyvsp[0].valores)); contador++;}
 #line 1327 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1352,7 +1352,7 @@ yyreduce:
 
   case 22:
 #line 62 "ficheiro.y" /* yacc.c:1646  */
-    {printf("  <tr>\n    <td>Date</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); strcpy(chave, (yyvsp[0].valores));  contador++;}
+    {printf("  <tr>\n    <td>Date</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
 #line 1357 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1651,7 +1651,7 @@ int main(){
 	yyparse();
 	endTable();
 	printf("<h1>Numero de chaves %d</h1>\n",contador);
-	printf("<h4>Tem uma reunião no dia %s</h4>\n",chave );
+	printf("<p style=\"color:%s;\">O valor em hexadecimal para colorir este paragrafo foi retirado da tabela acima</p>\n",chave );
 	htmlEnd();
 	return 0;
 }
