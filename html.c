@@ -4,14 +4,16 @@ void style();
 
 void htmlBegin(){
 	printf("<!DOCTYPE html>\n<html>\n<head>\n");
-	printf("<title>Google calendar info</title>\n");
 	style();
-	printf("</head>\n<body>\n");
-	printf("<h2>HTML Table</h2>\n");
+	printf("</head>\n");
+	printf("<body>\n\n");
+	printf("<h1>Google calendar info</h1>\n\n");
 	printf("<table>\n");
 }
 void htmlEnd(){
-	printf("</table>\n</body>\n</html>\n");
+	printf("</table>\n\n");
+	printf("</body>\n");
+	printf("</html>\n");
 }
 void style(){
 	printf("<style>\n");
