@@ -65,13 +65,15 @@
 #line 2 "ficheiro.y" /* yacc.c:339  */
 
 	#include <stdio.h>
+	#include <string.h>
 	#include "html.c"
 	int yylex();
 	int yyerror(char*);
 	extern int yylineno;
 	int contador = 0;
+	char chave[100];
 
-#line 75 "y.tab.c" /* yacc.c:339  */
+#line 77 "y.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -157,10 +159,10 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 10 "ficheiro.y" /* yacc.c:355  */
+#line 12 "ficheiro.y" /* yacc.c:355  */
 char valores[100];
 
-#line 164 "y.tab.c" /* yacc.c:355  */
+#line 166 "y.tab.c" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -177,7 +179,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 181 "y.tab.c" /* yacc.c:358  */
+#line 183 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -476,10 +478,10 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    19,    19,    23,    24,    28,    29,    30,    31,    35,
-      39,    43,    49,    51,    52,    53,    54,    55,    56,    57,
-      58,    59,    60,    61,    62,    63,    64,    65,    66,    67,
-      68,    69,    72,    73
+       0,    21,    21,    25,    26,    30,    31,    32,    33,    37,
+      41,    45,    51,    53,    54,    55,    56,    57,    58,    59,
+      60,    61,    62,    63,    64,    65,    66,    67,    68,    69,
+      70,    71,    74,    75
 };
 #endif
 
@@ -1282,134 +1284,134 @@ yyreduce:
   switch (yyn)
     {
         case 5:
-#line 28 "ficheiro.y" /* yacc.c:1646  */
+#line 30 "ficheiro.y" /* yacc.c:1646  */
     {printf("  </tr>\n");}
-#line 1288 "y.tab.c" /* yacc.c:1646  */
+#line 1290 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 49 "ficheiro.y" /* yacc.c:1646  */
+#line 51 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <th>Identificador</th>\n    <th>Valor</th>\n  </tr>\n"); 
 										 printf("  <tr>\n    <td>Kind</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1295 "y.tab.c" /* yacc.c:1646  */
+#line 1297 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 51 "ficheiro.y" /* yacc.c:1646  */
+#line 53 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>ETAG</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1301 "y.tab.c" /* yacc.c:1646  */
+#line 1303 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 52 "ficheiro.y" /* yacc.c:1646  */
+#line 54 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>ID</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1307 "y.tab.c" /* yacc.c:1646  */
+#line 1309 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 53 "ficheiro.y" /* yacc.c:1646  */
+#line 55 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Name</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1313 "y.tab.c" /* yacc.c:1646  */
+#line 1315 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 16:
-#line 54 "ficheiro.y" /* yacc.c:1646  */
+#line 56 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Summary</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );contador++;}
-#line 1319 "y.tab.c" /* yacc.c:1646  */
+#line 1321 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 17:
-#line 55 "ficheiro.y" /* yacc.c:1646  */
+#line 57 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Background color</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );contador++;}
-#line 1325 "y.tab.c" /* yacc.c:1646  */
+#line 1327 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 18:
-#line 56 "ficheiro.y" /* yacc.c:1646  */
+#line 58 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Email</td>\n    <td><a href=\"mailto:%s\">%s</a></td> \n", (yyvsp[0].valores),(yyvsp[0].valores) );contador++;}
-#line 1331 "y.tab.c" /* yacc.c:1646  */
+#line 1333 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 19:
-#line 57 "ficheiro.y" /* yacc.c:1646  */
+#line 59 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Location</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1337 "y.tab.c" /* yacc.c:1646  */
+#line 1339 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 20:
-#line 58 "ficheiro.y" /* yacc.c:1646  */
+#line 60 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Timezone</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1343 "y.tab.c" /* yacc.c:1646  */
+#line 1345 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 21:
-#line 59 "ficheiro.y" /* yacc.c:1646  */
+#line 61 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Hidden</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1349 "y.tab.c" /* yacc.c:1646  */
+#line 1351 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 22:
-#line 60 "ficheiro.y" /* yacc.c:1646  */
-    {printf("  <tr>\n    <td>Date</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1355 "y.tab.c" /* yacc.c:1646  */
+#line 62 "ficheiro.y" /* yacc.c:1646  */
+    {printf("  <tr>\n    <td>Date</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); strcpy(chave, (yyvsp[0].valores));  contador++;}
+#line 1357 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 23:
-#line 61 "ficheiro.y" /* yacc.c:1646  */
+#line 63 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Created on</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );contador++;}
-#line 1361 "y.tab.c" /* yacc.c:1646  */
+#line 1363 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 24:
-#line 62 "ficheiro.y" /* yacc.c:1646  */
+#line 64 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>URL</td>\n    <td><a href=\"%s\">%s</a></td> \n", (yyvsp[0].valores),(yyvsp[0].valores) ); contador++;}
-#line 1367 "y.tab.c" /* yacc.c:1646  */
+#line 1369 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 25:
-#line 63 "ficheiro.y" /* yacc.c:1646  */
+#line 65 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Link</td>\n    <td><a href=\"%s\">%s</a></td> \n", (yyvsp[0].valores),(yyvsp[0].valores) );contador++;}
-#line 1373 "y.tab.c" /* yacc.c:1646  */
+#line 1375 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 26:
-#line 64 "ficheiro.y" /* yacc.c:1646  */
+#line 66 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Time</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1379 "y.tab.c" /* yacc.c:1646  */
+#line 1381 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 27:
-#line 65 "ficheiro.y" /* yacc.c:1646  */
+#line 67 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Added guest</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );contador++;}
-#line 1385 "y.tab.c" /* yacc.c:1646  */
+#line 1387 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 28:
-#line 66 "ficheiro.y" /* yacc.c:1646  */
+#line 68 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Code</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );contador++;}
-#line 1391 "y.tab.c" /* yacc.c:1646  */
+#line 1393 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 29:
-#line 67 "ficheiro.y" /* yacc.c:1646  */
+#line 69 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Type</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );contador++;}
-#line 1397 "y.tab.c" /* yacc.c:1646  */
+#line 1399 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 30:
-#line 68 "ficheiro.y" /* yacc.c:1646  */
+#line 70 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Key</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1403 "y.tab.c" /* yacc.c:1646  */
+#line 1405 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 31:
-#line 69 "ficheiro.y" /* yacc.c:1646  */
+#line 71 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Reserved</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );contador++;}
-#line 1409 "y.tab.c" /* yacc.c:1646  */
+#line 1411 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1413 "y.tab.c" /* yacc.c:1646  */
+#line 1415 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1637,7 +1639,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 77 "ficheiro.y" /* yacc.c:1906  */
+#line 79 "ficheiro.y" /* yacc.c:1906  */
 
 int yyerror(char *msg){
 	fprintf(stderr, "ERRO(%d):%s\n",yylineno, msg);
@@ -1649,6 +1651,7 @@ int main(){
 	yyparse();
 	endTable();
 	printf("<h1>Numero de chaves %d</h1>\n",contador);
+	printf("<h4>Tem uma reunião no dia %s</h4>\n",chave );
 	htmlEnd();
 	return 0;
 }

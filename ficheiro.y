@@ -1,11 +1,13 @@
 
 %{
 	#include <stdio.h>
+	#include <string.h>
 	#include "html.c"
 	int yylex();
 	int yyerror(char*);
 	extern int yylineno;
 	int contador = 0;
+	char chave[100];
 %}
 %union {char valores[100];}
 	//ponto da partida
@@ -57,7 +59,7 @@ key 			:    KIND 				{printf("  <tr>\n    <th>Identificador</th>\n    <th>Valor<
 		|    		 LOCATION			{printf("  <tr>\n    <td>Location</td>\n    <td>%s</td> \n", $1 ); contador++;}
 		|   		 TIMEZONE			{printf("  <tr>\n    <td>Timezone</td>\n    <td>%s</td> \n", $1 ); contador++;}
 		|   		 HIDDEN				{printf("  <tr>\n    <td>Hidden</td>\n    <td>%s</td> \n", $1 ); contador++;}
-		|   		 DATE				{printf("  <tr>\n    <td>Date</td>\n    <td>%s</td> \n", $1 ); contador++;}
+		|   		 DATE				{printf("  <tr>\n    <td>Date</td>\n    <td>%s</td> \n", $1 ); strcpy(chave, $1);  contador++;}
 		|    		 CREATEDON			{printf("  <tr>\n    <td>Created on</td>\n    <td>%s</td> \n", $1 );contador++;}
 		|    		 URL				{printf("  <tr>\n    <td>URL</td>\n    <td><a href=\"%s\">%s</a></td> \n", $1,$1 ); contador++;}
 		|    		 LINK				{printf("  <tr>\n    <td>Link</td>\n    <td><a href=\"%s\">%s</a></td> \n", $1,$1 );contador++;}
@@ -85,6 +87,7 @@ int main(){
 	yyparse();
 	endTable();
 	printf("<h1>Numero de chaves %d</h1>\n",contador);
+	printf("<h4>Tem uma reunião no dia %s</h4>\n",chave );
 	htmlEnd();
 	return 0;
 }
