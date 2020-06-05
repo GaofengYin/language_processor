@@ -2,11 +2,12 @@
   "kind": "calendar#calendarListEntry",
   "etag": w/"sadsad221321sda",
   "id": 05,
-  "email": gaofengyin@hotmail.com,
-  "summary": this is a string,
+  "name": Gaofeng Yin
+  "email": a36233@alunos.ipb.pt,
+  "summary": aluno exemplar,
   "location": Braganca,
   "timeZone": Portugal/Lisbon,
-  "backgroundColor": #ff5733,
+  "backgroundColor": #ff5722,
   "hidden": true,
   "defaultReminders": [
     {
