@@ -186,7 +186,6 @@ kind [a-zA-Z]+"#"[a-zA-Z]+
 											}
 
 {palavras_reservadas}						{	
-												char *aux = yytext;
 												strcpy(yylval.valores, yytext);
 												return RESERVED;
 											}

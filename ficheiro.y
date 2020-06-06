@@ -7,13 +7,14 @@
 	int yyerror(char*);
 	extern int yylineno;
 	int contador = 0;
-	char chave[100];
+	char str[100];
 %}
 %union {char valores[100];}
 	//ponto da partida
 %start program
 	//tokens para identificar terminais 
-%token<valores> KIND ETAG ID SUMMARY NAME BACKGROUNDCOLOR TYPE EMAIL LOCATION KEY TIMEZONE TIME HIDDEN RESERVED OBJECT LINK DATE CREATEDON URL ADD_GUEST CODE;
+%token<valores> KIND ETAG ID SUMMARY NAME BACKGROUNDCOLOR TYPE EMAIL LOCATION KEY 
+%token<valores> TIMEZONE TIME HIDDEN RESERVED OBJECT LINK DATE CREATEDON URL ADD_GUEST CODE;
 
 %%
 			/*programa começa com duas chavetas que abrange todo ficheiro json,
@@ -54,7 +55,7 @@ key 			:    KIND 				{printf("  <tr>\n    <th>Identificador</th>\n    <th>Valor<
 		|   		 ID   				{printf("  <tr>\n    <td>ID</td>\n    <td>%s</td> \n", $1 ); contador++;}
 		|   		 NAME				{printf("  <tr>\n    <td>Name</td>\n    <td>%s</td> \n", $1 ); contador++;}
 		|   		 SUMMARY			{printf("  <tr>\n    <td>Summary</td>\n    <td>%s</td> \n", $1 );contador++;}
-		|    		 BACKGROUNDCOLOR	{printf("  <tr>\n    <td>Background color</td>\n    <td>%s</td> \n", $1 );  strcpy(chave, $1); contador++;}
+		|    		 BACKGROUNDCOLOR	{printf("  <tr>\n    <td>Background color</td>\n    <td>%s</td> \n", $1 );  strcpy(str, $1); contador++;}
 		|    		 EMAIL				{printf("  <tr>\n    <td>Email</td>\n    <td><a href=\"mailto:%s\">%s</a></td> \n", $1,$1 );contador++;}
 		|    		 LOCATION			{printf("  <tr>\n    <td>Location</td>\n    <td>%s</td> \n", $1 ); contador++;}
 		|   		 TIMEZONE			{printf("  <tr>\n    <td>Timezone</td>\n    <td>%s</td> \n", $1 ); contador++;}
@@ -87,7 +88,7 @@ int main(){
 	yyparse();
 	endTable();
 	printf("<h1>Numero de chaves %d</h1>\n",contador);
-	printf("<p style=\"color:%s;\">O valor em hexadecimal para colorir este paragrafo foi retirado da tabela acima</p>\n",chave );
+	printf("<p style=\"color:%s;\">O valor em hexadecimal para colorir este paragrafo foi retirado da tabela acima</p>\n",str);
 	htmlEnd();
 	return 0;
 }

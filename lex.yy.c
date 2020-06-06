@@ -1263,21 +1263,20 @@ case 20:
 YY_RULE_SETUP
 #line 189 "ficheiro.l"
 {	
-												char *aux = yytext;
 												strcpy(yylval.valores, yytext);
 												return RESERVED;
 											}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 195 "ficheiro.l"
+#line 194 "ficheiro.l"
 {	strcpy(yylval.valores, yytext);
 												return OBJECT;
 											}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 199 "ficheiro.l"
+#line 198 "ficheiro.l"
 {	strcpy(yylval.valores, yytext);
 												return (yytext[0]);
 											}
@@ -1285,20 +1284,20 @@ YY_RULE_SETUP
 case 23:
 /* rule 23 can match eol */
 YY_RULE_SETUP
-#line 203 "ficheiro.l"
+#line 202 "ficheiro.l"
 ;
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 205 "ficheiro.l"
+#line 204 "ficheiro.l"
 {printf("Token invalido\n");}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 207 "ficheiro.l"
+#line 206 "ficheiro.l"
 ECHO;
 	YY_BREAK
-#line 1302 "lex.yy.c"
+#line 1301 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2313,5 +2312,5 @@ void yyfree (void * ptr )
 			free( (char *) ptr );	/* see yyrealloc() for (char *) cast */
 }
 
-#line 207 "ficheiro.l"
+#line 206 "ficheiro.l"
 
