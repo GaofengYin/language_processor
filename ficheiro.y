@@ -87,8 +87,8 @@ int main(){
 	beginTable();
 	yyparse();
 	endTable();
-	printf("<h1>Numero de chaves %d</h1>\n",contador);
-	printf("<p style=\"color:%s;\">O valor em hexadecimal para colorir este paragrafo foi retirado da tabela acima</p>\n",str);
+	contadorDeIdenty(contador);
+	corDaLetra(str);
 	htmlEnd();
 	return 0;
 }

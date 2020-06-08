@@ -3,6 +3,8 @@ void htmlEnd();
 void style();
 void beginTable();
 void endTable();
+void corDaLetra();
+void contadorDeIdenty();
 
 void htmlBegin(){
 	printf("<!DOCTYPE html>\n<html>\n<head>\n");
@@ -38,4 +40,12 @@ void style(){
 	printf("tr:nth-child(even) {\n");
 	printf("background-color: #dddddd;\n}\n");
 	printf("</style>\n");
+}
+
+void contadorDeIdenty(int i){
+	printf("<h1>Numero de chaves %d</h1>\n",i);
+}
+
+void corDaLetra(char *str){
+	printf("<p style=\"color:%s;\">O valor em hexadecimal para colorir este paragrafo foi retirado da tabela acima. gri gri gri</p>\n",str);
 }
