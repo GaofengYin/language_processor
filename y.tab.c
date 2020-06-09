@@ -160,9 +160,10 @@ extern int yydebug;
 union YYSTYPE
 {
 #line 12 "ficheiro.y" /* yacc.c:355  */
-char valores[100];
 
-#line 166 "y.tab.c" /* yacc.c:355  */
+	char valores[100];
+
+#line 167 "y.tab.c" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -179,7 +180,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 183 "y.tab.c" /* yacc.c:358  */
+#line 184 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -478,10 +479,10 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    22,    22,    26,    27,    31,    32,    33,    34,    38,
-      42,    46,    52,    54,    55,    56,    57,    58,    59,    60,
-      61,    62,    63,    64,    65,    66,    67,    68,    69,    70,
-      71,    72,    75,    76
+       0,    24,    24,    28,    29,    36,    37,    38,    39,    43,
+      47,    51,    59,    61,    62,    63,    64,    65,    66,    67,
+      68,    69,    70,    71,    72,    73,    74,    75,    76,    77,
+      78,    79,    82,    83
 };
 #endif
 
@@ -1284,134 +1285,134 @@ yyreduce:
   switch (yyn)
     {
         case 5:
-#line 31 "ficheiro.y" /* yacc.c:1646  */
+#line 36 "ficheiro.y" /* yacc.c:1646  */
     {printf("  </tr>\n");}
-#line 1290 "y.tab.c" /* yacc.c:1646  */
+#line 1291 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 52 "ficheiro.y" /* yacc.c:1646  */
+#line 59 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <th>Identificador</th>\n    <th>Valor</th>\n  </tr>\n"); 
 										 printf("  <tr>\n    <td>Kind</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1297 "y.tab.c" /* yacc.c:1646  */
+#line 1298 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 54 "ficheiro.y" /* yacc.c:1646  */
+#line 61 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>ETAG</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1303 "y.tab.c" /* yacc.c:1646  */
+#line 1304 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 55 "ficheiro.y" /* yacc.c:1646  */
-    {printf("  <tr>\n    <td>ID</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1309 "y.tab.c" /* yacc.c:1646  */
+#line 62 "ficheiro.y" /* yacc.c:1646  */
+    {printf("  <tr>\n    <td>ID</td>\n    <td>%s</ttony d> \n", (yyvsp[0].valores) ); contador++;}
+#line 1310 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 56 "ficheiro.y" /* yacc.c:1646  */
+#line 63 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Name</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1315 "y.tab.c" /* yacc.c:1646  */
+#line 1316 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 16:
-#line 57 "ficheiro.y" /* yacc.c:1646  */
+#line 64 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Summary</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );contador++;}
-#line 1321 "y.tab.c" /* yacc.c:1646  */
+#line 1322 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 17:
-#line 58 "ficheiro.y" /* yacc.c:1646  */
-    {printf("  <tr>\n    <td>Background color</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );  strcpy(str, (yyvsp[0].valores)); contador++;}
-#line 1327 "y.tab.c" /* yacc.c:1646  */
+#line 65 "ficheiro.y" /* yacc.c:1646  */
+    {printf("  <tr>\n    <td>Color</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );  strcpy(str, (yyvsp[0].valores)); contador++;}
+#line 1328 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 18:
-#line 59 "ficheiro.y" /* yacc.c:1646  */
+#line 66 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Email</td>\n    <td><a href=\"mailto:%s\">%s</a></td> \n", (yyvsp[0].valores),(yyvsp[0].valores) );contador++;}
-#line 1333 "y.tab.c" /* yacc.c:1646  */
+#line 1334 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 19:
-#line 60 "ficheiro.y" /* yacc.c:1646  */
+#line 67 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Location</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1339 "y.tab.c" /* yacc.c:1646  */
+#line 1340 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 20:
-#line 61 "ficheiro.y" /* yacc.c:1646  */
+#line 68 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Timezone</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1345 "y.tab.c" /* yacc.c:1646  */
+#line 1346 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 21:
-#line 62 "ficheiro.y" /* yacc.c:1646  */
+#line 69 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Hidden</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1351 "y.tab.c" /* yacc.c:1646  */
+#line 1352 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 22:
-#line 63 "ficheiro.y" /* yacc.c:1646  */
+#line 70 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Date</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1357 "y.tab.c" /* yacc.c:1646  */
+#line 1358 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 23:
-#line 64 "ficheiro.y" /* yacc.c:1646  */
+#line 71 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Created on</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );contador++;}
-#line 1363 "y.tab.c" /* yacc.c:1646  */
+#line 1364 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 24:
-#line 65 "ficheiro.y" /* yacc.c:1646  */
-    {printf("  <tr>\n    <td>URL</td>\n    <td><a href=\"%s\">%s</a></td> \n", (yyvsp[0].valores),(yyvsp[0].valores) ); contador++;}
-#line 1369 "y.tab.c" /* yacc.c:1646  */
+#line 72 "ficheiro.y" /* yacc.c:1646  */
+    {printf("  <tr>\n    <td>URL</td>\n    <td><a href=\"%s\" target=\"_blank\">%s</a></td> \n", (yyvsp[0].valores),(yyvsp[0].valores) ); contador++;}
+#line 1370 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 25:
-#line 66 "ficheiro.y" /* yacc.c:1646  */
-    {printf("  <tr>\n    <td>Link</td>\n    <td><a href=\"%s\">%s</a></td> \n", (yyvsp[0].valores),(yyvsp[0].valores) );contador++;}
-#line 1375 "y.tab.c" /* yacc.c:1646  */
+#line 73 "ficheiro.y" /* yacc.c:1646  */
+    {printf("  <tr>\n    <td>Link</td>\n    <td><a href=\"%s\" target=\"_blank\">%s</a></td> \n", (yyvsp[0].valores),(yyvsp[0].valores) );contador++;}
+#line 1376 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 26:
-#line 67 "ficheiro.y" /* yacc.c:1646  */
+#line 74 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Time</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1381 "y.tab.c" /* yacc.c:1646  */
+#line 1382 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 27:
-#line 68 "ficheiro.y" /* yacc.c:1646  */
+#line 75 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Added guest</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );contador++;}
-#line 1387 "y.tab.c" /* yacc.c:1646  */
+#line 1388 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 28:
-#line 69 "ficheiro.y" /* yacc.c:1646  */
+#line 76 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Code</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );contador++;}
-#line 1393 "y.tab.c" /* yacc.c:1646  */
+#line 1394 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 29:
-#line 70 "ficheiro.y" /* yacc.c:1646  */
+#line 77 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Type</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );contador++;}
-#line 1399 "y.tab.c" /* yacc.c:1646  */
+#line 1400 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 30:
-#line 71 "ficheiro.y" /* yacc.c:1646  */
+#line 78 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Key</td>\n    <td>%s</td> \n", (yyvsp[0].valores) ); contador++;}
-#line 1405 "y.tab.c" /* yacc.c:1646  */
+#line 1406 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 31:
-#line 72 "ficheiro.y" /* yacc.c:1646  */
+#line 79 "ficheiro.y" /* yacc.c:1646  */
     {printf("  <tr>\n    <td>Reserved</td>\n    <td>%s</td> \n", (yyvsp[0].valores) );contador++;}
-#line 1411 "y.tab.c" /* yacc.c:1646  */
+#line 1412 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1415 "y.tab.c" /* yacc.c:1646  */
+#line 1416 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1639,13 +1640,14 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 80 "ficheiro.y" /* yacc.c:1906  */
+#line 87 "ficheiro.y" /* yacc.c:1906  */
 
 int yyerror(char *msg){
 	fprintf(stderr, "ERRO(%d):%s\n",yylineno, msg);
 	return 0;
 }
 int main(){
+	//as funções estão no ficheiro html.c para melhor organização do código
 	htmlBegin();
 	beginTable();
 	yyparse();
@@ -1655,5 +1657,6 @@ int main(){
 	htmlEnd();
 	return 0;
 }
-//consultar isto 
+
+//consultei a seguinte pagina para tirar umas referências
 //https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro

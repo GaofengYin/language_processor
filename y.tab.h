@@ -97,9 +97,10 @@ extern int yydebug;
 union YYSTYPE
 {
 #line 12 "ficheiro.y" /* yacc.c:1909  */
-char valores[100];
 
-#line 103 "y.tab.h" /* yacc.c:1909  */
+	char valores[100];
+
+#line 104 "y.tab.h" /* yacc.c:1909  */
 };
 
 typedef union YYSTYPE YYSTYPE;

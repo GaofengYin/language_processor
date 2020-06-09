@@ -32,7 +32,7 @@ kind [a-zA-Z]+"#"[a-zA-Z]+
 
 %%
 					// chave : valor da chave
-
+											//codigo para retirar tudo que está para trás da expressão regular
 "\"kind\": "\"{kind}\" 						{	
 												char *aux = yytext;
 												int i;

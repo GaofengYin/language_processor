@@ -982,7 +982,7 @@ YY_DECL
 #line 34 "ficheiro.l"
 
 					// chave : valor da chave
-
+											//codigo para retirar tudo que está para trás da expressão regular
 #line 987 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
