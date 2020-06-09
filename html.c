@@ -14,10 +14,12 @@ void htmlBegin(){
 	printf("<h1>Google calendar info</h1>\n\n");
 }
 void beginTable(){
+	printf("<details>\n<summary>SPOILER</summary>\n");
 	printf("<table class=\"center\">\n");
 }
 void endTable(){
-printf("</table>\n\n");
+	printf("</table>\n\n");
+	printf("</details>\n");
 }
 void htmlEnd(){
 	printf("</body>\n");
@@ -25,7 +27,7 @@ void htmlEnd(){
 }
 void style(){
 	printf("<style>\n");
-	printf("h1, p {text-align: center;}\n");
+	printf("h1, p, summary {text-align: center;}\n");
 	printf("table {\n");
 	printf("   font-family: arial, sans-serif;\n");
 	printf("   border-collapse: collapse;\n");
