@@ -9,5 +9,4 @@ The second part is a continuation of the first one where it is intended to give 
 practical application to the parsing process, which goes beyond the “simple” lexical and
 syntactic validation.
 
-Gaofeng Yin
 
